@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Portal Orang Tua - Aplikasi TK</title>
+</head>
+<body>
+  <header>
+    <h1>Portal Orang Tua</h1>
+    <nav>
+      <ul>
+        <li><a href="login-ortu.html">Login Orang Tua</a></li>
+        <li><a href="index.html">Masuk sebagai Guru/Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Login Orang Tua</h2>
+      <p>Masukkan username (NISN anak) dan password untuk melihat data serta laporan perkembangan anak Anda. Portal ini bersifat <strong>read-only</strong> (hanya melihat data), tanpa perlu registrasi akun terlebih dahulu — username dan password sudah dibuatkan oleh admin sekolah berdasarkan NISN anak saat pendaftaran.</p>
+
+      <section>
+        <h3>Form Login</h3>
+        <form action="portal-ortu.html" method="get">
+          <p>
+            <label for="username-ortu">Username (NISN Anak)</label><br>
+            <input type="text" id="username-ortu" name="username-ortu" placeholder="Contoh: 3141001" pattern="[0-9]{7,10}" required>
+          </p>
+
+          <p>
+            <label for="password-ortu">Password (NISN Anak)</label><br>
+            <input type="password" id="password-ortu" name="password-ortu" placeholder="Masukkan NISN anak" required>
+          </p>
+
+          <p>
+            <button type="submit">Masuk</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h3>Belum Tahu Username?</h3>
+        <p>Username dan password (berupa NISN anak) dapat ditanyakan langsung ke Admin sekolah saat pendaftaran atau melalui kantor TK.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aplikasi Manajemen Guru & Admin Sekolah TK - Rosa Ardila</p>
+  </footer>
+</body>
+</html>

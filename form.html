@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah / Edit Data Siswa - Aplikasi Guru & Admin TK</title>
+</head>
+<body>
+  <header>
+    <h1>Aplikasi Manajemen Guru & Admin Sekolah TK</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Daftar Siswa & Kelas</a></li>
+        <li><a href="form.html">Tambah / Edit Siswa</a></li>
+        <li><a href="detail.html">Detail Siswa</a></li>
+        <li><a href="login-ortu.html">Portal Orang Tua</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Form Tambah / Edit Data Siswa</h2>
+      <p>Gunakan formulir berikut untuk menambahkan siswa baru atau memperbarui data siswa yang sudah ada. NISN akan digunakan sebagai username &amp; password login Orang Tua di Portal Orang Tua (read-only), jadi pastikan diisi dengan benar.</p>
+
+      <section>
+        <h3>Data Siswa</h3>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Informasi Siswa</legend>
+
+            <p>
+              <label for="nama-siswa">Nama Lengkap Siswa</label><br>
+              <input type="text" id="nama-siswa" name="nama-siswa" placeholder="Contoh: Aditya Pratama" required>
+            </p>
+
+            <p>
+              <label for="nisn-siswa">NISN (Nomor Induk Siswa Nasional)</label><br>
+              <input type="text" id="nisn-siswa" name="nisn-siswa" placeholder="Contoh: 3141001" pattern="[0-9]{7,10}" required>
+            </p>
+
+            <p>
+              <label for="kelas-siswa">Kelas</label><br>
+              <select id="kelas-siswa" name="kelas-siswa" required>
+                <option value="">-- Pilih Kelas --</option>
+                <option value="kelompok-a">Kelompok A</option>
+                <option value="kelompok-b">Kelompok B</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="tanggal-lahir">Tanggal Lahir</label><br>
+              <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+            </p>
+
+            <p>
+              <label for="foto-siswa">Foto Siswa</label><br>
+              <input type="file" id="foto-siswa" name="foto-siswa" accept="image/*">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Data Orang Tua / Wali</legend>
+
+            <p>
+              <label for="nama-ortu">Nama Orang Tua / Wali</label><br>
+              <input type="text" id="nama-ortu" name="nama-ortu" placeholder="Contoh: Budi Santoso" required>
+            </p>
+
+            <p>
+              <label for="kontak-ortu">Nomor Kontak Orang Tua (opsional)</label><br>
+              <input type="tel" id="kontak-ortu" name="kontak-ortu" placeholder="08xxxxxxxxxx">
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Presensi Hari Ini</legend>
+
+            <p>
+              <label for="status-kehadiran">Status Kehadiran</label><br>
+              <select id="status-kehadiran" name="status-kehadiran">
+                <option value="hadir">Hadir</option>
+                <option value="izin">Izin</option>
+                <option value="sakit">Sakit</option>
+                <option value="alpha">Alpha</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="catatan-presensi">Catatan Presensi</label><br>
+              <textarea id="catatan-presensi" name="catatan-presensi" rows="3" placeholder="Catatan tambahan, mis. alasan izin/sakit"></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Penilaian Perkembangan Anak</legend>
+
+            <p>
+              <label for="aspek-motorik">Perkembangan Motorik</label><br>
+              <select id="aspek-motorik" name="aspek-motorik">
+                <option value="bsb">Berkembang Sangat Baik</option>
+                <option value="bsh">Berkembang Sesuai Harapan</option>
+                <option value="mb">Mulai Berkembang</option>
+                <option value="bb">Belum Berkembang</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="catatan-perkembangan">Catatan Observasi Guru</label><br>
+              <textarea id="catatan-perkembangan" name="catatan-perkembangan" rows="4" placeholder="Tuliskan hasil observasi perkembangan anak hari ini"></textarea>
+            </p>
+          </fieldset>
+
+          <p>
+            <button type="submit">Simpan Data</button>
+            <button type="reset">Batal</button>
+          </p>
+        </form>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aplikasi Manajemen Guru & Admin Sekolah TK - Rosa Ardila</p>
+  </footer>
+</body>
+</html>
