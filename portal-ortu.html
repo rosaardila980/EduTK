@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Data Anak Saya - Portal Orang Tua</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Portal Orang Tua</h1>
     <nav>
       <ul>
-        <li><a href="portal-ortu.html">Data Anak Saya</a></li>
+        <li><a href="portal-ortu.html" class="aktif">Data Anak Saya</a></li>
         <li><a href="login-ortu.html">Logout</a></li>
       </ul>
     </nav>
@@ -23,8 +24,9 @@
 
       <section>
         <h3>Profil Anak</h3>
-        <img src="img/siswa-01.jpg" alt="Foto Aditya Pratama mengenakan seragam TK, tersenyum menghadap kamera" width="150" height="150">
-        <table border="1">
+        <div class="profil">
+        <img class="foto" src="img/siswa-01.jpg" alt="Foto Aditya Pratama mengenakan seragam TK, tersenyum menghadap kamera" width="150" height="150">
+        <div class="bungkus-tabel"><table>
           <caption>Data identitas anak</caption>
           <tbody>
             <tr>
@@ -40,12 +42,13 @@
               <td>Kelompok A</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
+        </div>
       </section>
 
       <section>
         <h3>Rekap Presensi Bulan Ini</h3>
-        <table border="1">
+        <div class="bungkus-tabel"><table>
           <caption>Riwayat kehadiran anak selama bulan berjalan</caption>
           <thead>
             <tr>
@@ -57,26 +60,26 @@
           <tbody>
             <tr>
               <td>01 September 2026</td>
-              <td>Hadir</td>
+              <td><span class="badge hijau">Hadir</span></td>
               <td>-</td>
             </tr>
             <tr>
               <td>02 September 2026</td>
-              <td>Izin</td>
+              <td><span class="badge kuning">Izin</span></td>
               <td>Acara keluarga</td>
             </tr>
             <tr>
               <td>03 September 2026</td>
-              <td>Hadir</td>
+              <td><span class="badge hijau">Hadir</span></td>
               <td>-</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       <section>
         <h3>Laporan Perkembangan Anak</h3>
-        <table border="1">
+        <div class="bungkus-tabel"><table>
           <caption>Penilaian perkembangan anak berdasarkan aspek kurikulum PAUD</caption>
           <thead>
             <tr>
@@ -88,39 +91,41 @@
           <tbody>
             <tr>
               <td>Motorik</td>
-              <td>Berkembang Sesuai Harapan</td>
+              <td><span class="badge biru">Berkembang Sesuai Harapan</span></td>
               <td>Sudah mampu menggunting mengikuti pola garis lurus.</td>
             </tr>
             <tr>
               <td>Kognitif</td>
-              <td>Berkembang Sangat Baik</td>
+              <td><span class="badge hijau">Berkembang Sangat Baik</span></td>
               <td>Mampu mengenali dan mengurutkan angka 1-10.</td>
             </tr>
             <tr>
               <td>Bahasa</td>
-              <td>Berkembang Sesuai Harapan</td>
+              <td><span class="badge biru">Berkembang Sesuai Harapan</span></td>
               <td>Aktif bercerita menggunakan kalimat sederhana.</td>
             </tr>
             <tr>
               <td>Sosial-Emosional</td>
-              <td>Mulai Berkembang</td>
+              <td><span class="badge kuning">Mulai Berkembang</span></td>
               <td>Masih perlu bimbingan saat berbagi mainan dengan teman.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       <section>
         <h3>Dokumentasi Kegiatan Kelas</h3>
+        <div class="galeri">
         <figure>
           <img src="img/kegiatan-01.jpg" alt="Aditya Pratama sedang mengikuti kegiatan mewarnai bersama teman sekelas di ruang kelas" width="300" height="200">
           <figcaption>Kegiatan mewarnai - 03 September 2026</figcaption>
         </figure>
+        </div>
       </section>
 
       <section>
         <h3>Pengumuman & Kalender Akademik</h3>
-        <table border="1">
+        <div class="bungkus-tabel"><table>
           <caption>Pengumuman dan agenda sekolah terbaru</caption>
           <thead>
             <tr>
@@ -141,7 +146,7 @@
               <td>Seluruh siswa Kelompok A & B mengikuti kunjungan edukatif.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
     </article>
   </main>
