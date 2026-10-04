@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Siswa - Aplikasi Guru & Admin TK</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Aplikasi Manajemen Guru & Admin Sekolah TK</h1>
+    <h1>Aplikasi Manajemen Guru & Admin TK Kasih Bunda</h1>
     <nav>
       <ul>
         <li><a href="index.html">Daftar Siswa & Kelas</a></li>
         <li><a href="form.html">Tambah / Edit Siswa</a></li>
-        <li><a href="detail.html">Detail Siswa</a></li>
+        <li><a href="detail.html" class="aktif">Detail Siswa</a></li>
         <li><a href="login-ortu.html">Portal Orang Tua</a></li>
       </ul>
     </nav>
@@ -24,8 +25,9 @@
 
       <section>
         <h3>Profil Siswa</h3>
-        <img src="img/siswa-01.jpg" alt="Foto siswa bernama Aditya Pratama mengenakan seragam TK, tersenyum menghadap kamera" width="150" height="150">
-        <table border="1">
+        <div class="profil">
+        <img class="foto" src="img/siswa-01.jpg" alt="Foto siswa bernama Aditya Pratama mengenakan seragam TK, tersenyum menghadap kamera" width="150" height="150">
+        <div class="bungkus-tabel"><table>
           <caption>Data identitas siswa</caption>
           <tbody>
             <tr>
@@ -53,12 +55,13 @@
               <td>0812xxxxxxx</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
+        </div>
       </section>
 
       <section>
         <h3>Rekap Presensi Bulan Ini</h3>
-        <table border="1">
+        <div class="bungkus-tabel"><table>
           <caption>Riwayat kehadiran siswa selama bulan berjalan</caption>
           <thead>
             <tr>
@@ -70,27 +73,27 @@
           <tbody>
             <tr>
               <td>01 September 2026</td>
-              <td>Hadir</td>
+              <td><span class="badge hijau">Hadir</span></td>
               <td>-</td>
             </tr>
             <tr>
               <td>02 September 2026</td>
-              <td>Izin</td>
+              <td><span class="badge kuning">Izin</span></td>
               <td>Acara keluarga</td>
             </tr>
             <tr>
               <td>03 September 2026</td>
-              <td>Hadir</td>
+              <td><span class="badge hijau">Hadir</span></td>
               <td>-</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       <section>
         <h3>Laporan Perkembangan Anak</h3>
-        <table border="1">
-          <caption>Penilaian perkembangan anak berdasarkan aspek kurikulum PAUD</caption>
+        <div class="bungkus-tabel"><table>
+          <caption>Penilaian perkembangan anak berdasarkan aspek kurikulum TK Kasih  Bunda</caption>
           <thead>
             <tr>
               <th scope="col">Aspek Perkembangan</th>
@@ -101,30 +104,31 @@
           <tbody>
             <tr>
               <td>Motorik</td>
-              <td>Berkembang Sesuai Harapan</td>
+              <td><span class="badge biru">Berkembang Sesuai Harapan</span></td>
               <td>Sudah mampu menggunting mengikuti pola garis lurus.</td>
             </tr>
             <tr>
               <td>Kognitif</td>
-              <td>Berkembang Sangat Baik</td>
+              <td><span class="badge hijau">Berkembang Sangat Baik</span></td>
               <td>Mampu mengenali dan mengurutkan angka 1-10.</td>
             </tr>
             <tr>
               <td>Bahasa</td>
-              <td>Berkembang Sesuai Harapan</td>
+              <td><span class="badge biru">Berkembang Sesuai Harapan</span></td>
               <td>Aktif bercerita menggunakan kalimat sederhana.</td>
             </tr>
             <tr>
               <td>Sosial-Emosional</td>
-              <td>Mulai Berkembang</td>
+              <td><span class="badge kuning">Mulai Berkembang</span></td>
               <td>Masih perlu bimbingan saat berbagi mainan dengan teman.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       <section>
         <h3>Dokumentasi Kegiatan</h3>
+        <div class="galeri">
         <figure>
           <img src="img/kegiatan-01.jpg" alt="Aditya Pratama sedang mengikuti kegiatan mewarnai bersama teman sekelas di ruang kelas" width="300" height="200">
           <figcaption>Kegiatan mewarnai - 03 September 2026</figcaption>
@@ -133,6 +137,7 @@
           <img src="img/kegiatan-02.jpg" alt="Aditya Pratama bermain bola bersama teman-teman di halaman sekolah" width="300" height="200">
           <figcaption>Kegiatan bermain di luar kelas - 01 September 2026</figcaption>
         </figure>
+        </div>
       </section>
 
       <p><a href="index.html">&larr; Kembali ke Daftar Siswa</a></p>
@@ -140,7 +145,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Aplikasi Manajemen Guru & Admin Sekolah TK - Rosa Ardila</p>
+    <p>&copy; 2026 Aplikasi Manajemen Guru & Admin Sekolah TK Kasih Bunda - Rosa Ardila</p>
   </footer>
 </body>
 </html>
