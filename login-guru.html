@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Guru &amp; Admin - Aplikasi TK Kasih Bunda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Aplikasi Manajemen Guru &amp; Admin TK Kasih Bunda</h1>
+    <nav>
+      <ul>
+        <li><a href="login-guru.html" class="aktif">Login Guru/Admin</a></li>
+        <li><a href="login-ortu.html">Portal Orang Tua</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="login-guru">
+      <h2>Login Guru &amp; Admin</h2>
+      <p>Masukkan username dan password yang diberikan oleh sekolah untuk mengelola data siswa, presensi, dan laporan perkembangan anak.</p>
+
+      <section>
+        <h3>Form Login</h3>
+        <form action="index.html" method="get">
+          <p>
+            <label for="username-guru">Username</label><br>
+            <input type="text" id="username-guru" name="username-guru" placeholder="Contoh: guru01" required>
+          </p>
+
+          <p>
+            <label for="password-guru">Password</label><br>
+            <input type="password" id="password-guru" name="password-guru" placeholder="Masukkan password" required>
+          </p>
+
+          <p>
+            <label for="peran">Masuk sebagai</label><br>
+            <select id="peran" name="peran" required>
+              <option value="">-- Pilih Peran --</option>
+              <option value="guru">Guru</option>
+              <option value="admin">Admin</option>
+            </select>
+          </p>
+
+          <p>
+            <button type="submit">Masuk</button>
+          </p>
+        </form>
+      </section>
+
+      <section>
+        <h3>Lupa Password?</h3>
+        <p>Hubungi Admin sekolah untuk mengatur ulang password akun Anda.</p>
+        <p>Orang tua siswa? <a href="login-ortu.html">Masuk ke Portal Orang Tua</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Aplikasi Manajemen Guru &amp; Admin Sekolah TK Kasih Bunda - Rosa Ardila</p>
+  </footer>
+</body>
+</html>
