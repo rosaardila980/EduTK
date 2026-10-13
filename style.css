@@ -1,263 +1,79 @@
 /* =========================================================
    style.css — Aplikasi Manajemen Guru & Admin TK Kasih Bunda
-   Tugas Minggu 3: CSS native (tanpa framework)
-   Dipakai bersama oleh: index, form, detail, login-ortu, portal-ortu
+   Tugas 4: Bootstrap 5 (CDN) + kustomisasi tema hijau/kuning/navy
+   dari Tugas Minggu 3. Layout memakai class Bootstrap; file ini
+   hanya berisi warna tema dan komponen tambahan.
    ========================================================= */
-
-/* ---------- Identitas visual: warna ---------- */
 :root {
-  --hijau: #2f7d5b;         /* warna utama */
+  --hijau: #2f7d5b;
   --hijau-tua: #1f5a42;
   --hijau-muda: #dff0e7;
-  --kuning: #f2b632;        /* aksen */
+  --kuning: #f2b632;
   --kuning-muda: #fdf0cc;
   --biru-muda: #dcebf7;
-  --navy: #1f2a44;          /* teks utama */
-  --abu: #5b6577;           /* teks sekunder */
-  --latar: #f2f6f4;         /* background halaman */
-  --putih: #ffffff;
+  --navy: #1f2a44;
+  --abu: #5b6577;
+  --latar: #f2f6f4;
   --garis: #d8e2dd;
+
+  /* hubungkan tema ke variabel Bootstrap */
+  --bs-body-font-family: "Nunito", "Segoe UI", Arial, sans-serif;
+  --bs-body-color: var(--navy);
+  --bs-body-bg: var(--latar);
+  --bs-link-color: var(--hijau);
+  --bs-link-hover-color: var(--hijau-tua);
 }
 
-* { box-sizing: border-box; }
+h2 { font-weight: 700; color: var(--hijau-tua); margin-bottom: .75rem; }
+.lead-teks { max-width: 720px; }
 
-/* ---------- Font properties (teks isi) ---------- */
-body {
-  margin: 0;
-  font-family: "Nunito", "Segoe UI", Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--navy);
-  background-color: var(--latar);
-}
-
-/* ---------- Font properties (judul) ---------- */
-h1 { font-size: 1.8rem;  font-weight: 800; margin: 0; }
-h2 { font-size: 1.45rem; font-weight: 700; margin: 0 0 .75rem; color: var(--hijau-tua); }
-h3 { font-size: 1.1rem;  font-weight: 700; margin: 0 0 .75rem; }
-p  { margin: 0 0 1rem; }
-a  { color: var(--hijau); }
-strong { font-weight: 800; }
-
-/* ---------- Header & navigasi (horizontal) ---------- */
-header {
-  background-color: var(--hijau);
-  color: var(--putih);
-  text-align: center;
-}
-header h1 {
-  padding: 1.25rem 1rem 1rem;
-  color: var(--putih);
-}
-
-nav { background-color: var(--hijau-tua); }
-nav ul {
-  list-style: none;            /* hilangkan bullet */
-  margin: 0;
-  padding: 0;
-  display: flex;               /* menu horizontal */
-  justify-content: center;
-  flex-wrap: wrap;
-}
-nav li a {
-  display: block;
-  padding: .85rem 1.25rem;
-  color: var(--putih);
-  text-decoration: none;
-  font-weight: 700;
-}
-nav li a:hover,
-nav li a.aktif {
+/* ---------- Navbar ---------- */
+.bg-hijau { background-color: var(--hijau); }
+.navbar .nav-link { font-weight: 700; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   background-color: var(--kuning);
   color: var(--navy);
+  border-radius: 6px;
 }
 
-/* ---------- Konten utama ---------- */
-main {
-  max-width: 960px;
-  margin: 1.5rem auto;
-  padding: 0 1rem;
-}
-
-article > h2 { text-align: center; margin-bottom: 1rem; }
-article > p  { text-align: center; max-width: 720px; margin-left: auto; margin-right: auto; }
-
-section {                       /* tiap bagian tampil sebagai kartu */
-  background-color: var(--putih);
-  border: 1px solid var(--garis);
-  border-radius: 10px;
-  padding: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-section > :last-child { margin-bottom: 0; }
-
-/* ---------- Pengelompokan dengan <div> ---------- */
-.profil {                       /* foto + tabel identitas berdampingan */
-  display: flex;
-  gap: 1.25rem;
-  align-items: flex-start;
-}
-.profil .bungkus-tabel { flex: 1; }
-.foto {
-  border-radius: 10px;
-  border: 3px solid var(--kuning);
-  object-fit: cover;
-}
-
-.bungkus-tabel { overflow-x: auto; }
-
-.galeri {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* ---------- Pengelompokan dengan <span> (label status) ---------- */
-.badge {
-  display: inline-block;
-  padding: .1rem .6rem;
-  border-radius: 999px;
-  font-size: .85rem;
+/* ---------- Tombol tema ---------- */
+.btn-hijau {
+  --bs-btn-color: #fff; --bs-btn-bg: var(--hijau); --bs-btn-border-color: var(--hijau);
+  --bs-btn-hover-color: #fff; --bs-btn-hover-bg: var(--hijau-tua); --bs-btn-hover-border-color: var(--hijau-tua);
+  --bs-btn-active-color: #fff; --bs-btn-active-bg: var(--hijau-tua); --bs-btn-active-border-color: var(--hijau-tua);
   font-weight: 700;
-  white-space: nowrap;
 }
+.btn-outline-hijau {
+  --bs-btn-color: var(--hijau-tua); --bs-btn-border-color: var(--hijau);
+  --bs-btn-hover-color: var(--hijau-tua); --bs-btn-hover-bg: var(--hijau-muda); --bs-btn-hover-border-color: var(--hijau);
+  --bs-btn-active-color: var(--hijau-tua); --bs-btn-active-bg: var(--hijau-muda); --bs-btn-active-border-color: var(--hijau);
+  font-weight: 700;
+}
+
+/* ---------- Badge status ---------- */
 .badge.hijau  { background-color: var(--hijau-muda);  color: var(--hijau-tua); }
 .badge.biru   { background-color: var(--biru-muda);   color: #1d4e7a; }
 .badge.kuning { background-color: var(--kuning-muda); color: #7a5a00; }
 
-/* ---------- Tabel ---------- */
-table { width: 100%; border-collapse: collapse; }
-caption {
-  caption-side: top;
-  text-align: left;
-  font-size: .9rem;
-  color: var(--abu);
-  padding-bottom: .5rem;
-}
-th, td {
-  padding: .6rem .75rem;
-  border-bottom: 1px solid var(--garis);
-  text-align: left;
-}
-thead th {
-  background-color: var(--latar);
-  font-weight: 700;
-}
-tbody th[scope="row"] {         /* tabel identitas: label di kiri */
-  width: 38%;
-  font-weight: 700;
-  color: var(--abu);
-}
+/* ---------- Kartu statistik ---------- */
+.stat { border-top: 4px solid var(--kuning) !important; }
 
-/* ---------- Gambar & figure ---------- */
-img { max-width: 100%; height: auto; display: block; }
-figure { margin: 0; }
-figcaption {
-  font-size: .85rem;
-  color: var(--abu);
-  text-align: center;
-  padding-top: .35rem;
-}
-
-/* ---------- Styling list (jika ada ul/ol di konten) ---------- */
-main ul, main ol { padding-left: 1.5rem; }
-main li { margin-bottom: .3rem; }
-main li::marker { color: var(--hijau); font-weight: 800; }
+/* ---------- Tabel, foto, figure ---------- */
+caption { caption-side: top; font-size: .9rem; color: var(--abu); padding-top: 0; }
+tbody th[scope="row"] { width: 38%; color: var(--abu); }
+.foto { border-radius: 10px; border: 3px solid var(--kuning); object-fit: cover; }
+figcaption { font-size: .85rem; color: var(--abu); text-align: center; padding-top: .35rem; }
 
 /* ---------- Form ---------- */
-fieldset {
-  border: 1px solid var(--garis);
-  border-radius: 8px;
-  padding: 1rem 1.25rem .5rem;
-  margin: 0 0 1.25rem;
-}
-legend {
-  font-weight: 700;
-  color: var(--hijau-tua);
-  padding: 0 .5rem;
-}
-form br { display: none; }
-form label {
-  display: block;
-  font-weight: 700;
-  margin-bottom: .25rem;
-  text-align: left;
-}
-input[type="text"],
-input[type="password"],
-input[type="tel"],
-input[type="date"],
-input[type="file"],
-select,
-textarea {
-  display: block;
-  width: 100%;
-  padding: .6rem .75rem;
-  border: 1px solid var(--garis);
-  border-radius: 6px;
-  background-color: var(--putih);
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--navy);
-}
-input:focus, select:focus, textarea:focus {
-  outline: 2px solid var(--kuning);
+.form-label { font-weight: 700; }
+legend { font-weight: 700; color: var(--hijau-tua); }
+.form-control:focus, .form-select:focus {
   border-color: var(--hijau);
+  box-shadow: 0 0 0 .2rem rgba(242, 182, 50, .45);
 }
 
-button {
-  padding: .7rem 1.5rem;
-  background-color: var(--hijau);
-  color: var(--putih);
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-button:hover { background-color: var(--hijau-tua); }
-button.sekunder {
-  background-color: var(--putih);
-  color: var(--hijau-tua);
-  border: 1px solid var(--hijau);
-}
-button.sekunder:hover { background-color: var(--hijau-muda); }
-
-/* ---------- Halaman login (orang tua & guru/admin) ---------- */
-.login-ortu,
-.login-guru { max-width: 480px; margin: 0 auto; }
-.login-ortu > p,
-.login-guru > p { text-align: left; }
-.login-ortu button[type="submit"],
-.login-guru button[type="submit"] { width: 100%; }
-
-/* ---------- Footer ---------- */
-footer {
-  text-align: center;
-  font-size: .85rem;
-  color: var(--abu);
-  padding: 1.5rem 1rem;
-}
-footer p { margin: 0; }
-
-/* =========================================================
-   RESPONSIVE (@media query) — layar <= 768px
-   1. Navigasi: horizontal -> vertikal
-   2. Foto profil + tabel: berdampingan -> bertumpuk
-   ========================================================= */
+/* ---------- Responsif tambahan (di luar grid Bootstrap) ---------- */
 @media (max-width: 768px) {
-  h1 { font-size: 1.35rem; }
-
-  nav ul { flex-direction: column; }
-  nav li a {
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-  }
-
-  .profil { flex-direction: column; }
-  .profil .bungkus-tabel { width: 100%; }
-
   tbody th[scope="row"] { width: auto; }
 }
