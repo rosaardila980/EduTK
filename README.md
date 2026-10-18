@@ -1,41 +1,30 @@
-# Aplikasi Manajemen Guru & Admin TK Kasih Bunda
 
-Aplikasi web untuk mengelola data siswa, presensi, dan laporan perkembangan anak di TK Kasih Bunda, dengan Portal Orang Tua (read-only) yang login memakai NISN anak.
+---
 
-**Tugas 4 (Bootstrap):** melanjutkan HTML (Minggu 2) dan CSS native (Minggu 3). Seluruh halaman dikonversi ke **Bootstrap 5.3 (CDN)**, sedangkan tema warna hijau–kuning–navy dari `style.css` dipertahankan lewat kustomisasi variabel Bootstrap. Belum terhubung ke backend/database.
+## Tugas 5: JavaScript & jQuery
 
-## Daftar Halaman
-| File | Keterangan | Syarat tugas |
+Menambahkan interaktivitas sisi client pada halaman yang sudah ada (tanpa halaman baru). Data masih dummy (array of object di `script.js`), belum terhubung backend/database. jQuery 3.7.1 dimuat lewat CDN, lalu `script.js`.
+
+### JavaScript murni
+- **Data dummy:** `dataSiswa`, `dataPresensi`, `dataPerkembangan`, `dataPengumuman` (array of object).
+- **Function pemroses data:** `hitungPerKelas()`, `filterSiswa()`, `urutkanSiswa()`, `hitungPresensi()`, `validasiSiswa()`.
+- **Struktur kendali:** `for...of`, `forEach`, `if/else`, `switch` untuk me-render tabel dari array (tabel siswa, presensi, laporan perkembangan, pengumuman tidak lagi ditulis manual di HTML).
+
+### jQuery
+| Halaman | Interaksi |
+|---|---|
+| `index.html` | Cari siswa (nama/NISN), filter kelas, urutkan; tombol **Tambah Siswa Cepat** (`slideToggle` form); validasi lalu tambah siswa ke array; tombol **Hapus** (`fadeOut`) dengan konfirmasi; statistik dan badge jumlah siswa ikut berubah |
+| `form.html` | Validasi saat submit (field kosong, NISN 7–10 digit, kontak); kolom catatan presensi muncul (`slideDown`) hanya jika status Izin/Sakit/Alpha dan wajib diisi; notifikasi `fadeIn/fadeOut` |
+| `detail.html`, `portal-ortu.html` | Filter presensi per status + rekap jumlah; tombol **Sembunyikan/Tampilkan** tiap kartu (`slideToggle`) |
+| `login-guru.html`, `login-ortu.html` | Validasi sederhana sebelum submit; login orang tua mengecek NISN terdaftar dan password = NISN |
+
+### Screenshot sebelum & sesudah interaksi
+| Interaksi | Sebelum | Sesudah |
 |---|---|---|
-| `index.html` | Dashboard ringkasan (grid kartu statistik) + daftar siswa per kelas | Dashboard grid & tabel/daftar |
-| `form.html` | Form tambah / edit data siswa | Form |
-| `detail.html` | Detail siswa (profil, presensi, laporan perkembangan, dokumentasi) | — |
-| `login-guru.html` | Login guru dan admin | Form |
-| `login-ortu.html` | Login orang tua | Form |
-| `portal-ortu.html` | Portal orang tua (read-only) | — |
-| `style.css` | Tema warna + komponen tambahan di atas Bootstrap | — |
+| Tambah siswa (form cepat) | ![](docs/screenshots/tambah-sebelum.png) | ![](docs/screenshots/tambah-sesudah.png) |
+| Hapus siswa | ![](docs/screenshots/hapus-sebelum.png) | ![](docs/screenshots/hapus-sesudah.png) |
 
-## Penerapan Bootstrap
-- **Grid:** `container` / `row` / `col-*` (mis. kartu statistik `col-6 col-lg-3`, dua tabel kelas `col-12 col-lg-6`, form `col-12 col-md-*`, profil + foto).
-- **Navigasi responsif:** `navbar navbar-expand-lg` dengan tombol hamburger (collapse) di layar kecil.
-- **Komponen:** card, table + `table-responsive`, badge, form control/select, button.
+| Filter presensi / sembunyikan kartu | ![](docs/screenshots/detail-sebelum.png) | ![](docs/screenshots/detail-sesudah.png) |
 
-## Alasan Memilih Bootstrap
-1. Aplikasi ini berpusat pada tabel data, form, dan dashboard. Bootstrap sudah menyediakan komponen siap pakai untuk itu, jadi pengembangan halaman admin lebih cepat dan konsisten.
-2. Grid `container–row–col` memudahkan layout responsif, penting karena guru/admin sering membuka dari HP maupun laptop, dan orang tua kebanyakan dari HP.
-3. Cukup lewat CDN tanpa build tool, sehingga tidak menambah kompleksitas di awal proyek fullstack.
-4. Tema khas sekolah (hijau–kuning) tetap bisa dipertahankan lewat CSS variables dan class kustom di `style.css`.
-
-## Screenshot
-Disimpan di `docs/screenshots/`.
-
-### Desktop
-![Dashboard desktop](docs/screenshots/index-desktop.png)
-
-
-### Mobile
-![Dashboard mobile](docs/screenshots/index-mobile.png)
-
-
-## Pembuat
-Rosa Ardila — S1 Rekayasa Perangkat Lunak, Universitas Telkom
+### Video demo
+[Tonton video demo interaktivitas](https://drive.google.com/drive/folders/11SrdAYryndARo3Z0PxG4o7Fzx5Rw0U5M?usp=drive_link)
