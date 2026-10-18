@@ -23,7 +23,8 @@
   </header>
 
   <main class="container my-4">
-<div class="row justify-content-center"><div class="col-12 col-md-8 col-lg-6"><h2 class="text-center">Login Orang Tua</h2><p class="text-center mx-auto lead-teks">Masukkan username (NISN anak) dan password untuk melihat data serta laporan perkembangan anak Anda. Portal ini bersifat <strong>read-only</strong> (hanya melihat data), tanpa perlu registrasi akun terlebih dahulu — username dan password sudah dibuatkan oleh admin sekolah berdasarkan NISN anak saat pendaftaran.</p><div class="card shadow-sm border-0 mb-3"><div class="card-body"><h3 class="h5 fw-bold mb-3">Form Login</h3><form action="portal-ortu.html" method="get"><div class="mb-3"><label for="username-ortu" class="form-label">Username (NISN Anak)</label><input type="text" class="form-control" id="username-ortu" name="username-ortu" placeholder="Contoh: 3141001" pattern="[0-9]{7,10}" required></div><div class="mb-3"><label for="password-ortu" class="form-label">Password (NISN Anak)</label><input type="password" class="form-control" id="password-ortu" name="password-ortu" placeholder="Masukkan NISN anak" required></div><button type="submit" class="btn btn-hijau w-100">Masuk</button></form></div></div><div class="card shadow-sm border-0 mb-3"><div class="card-body"><h3 class="h5 fw-bold mb-3">Belum Tahu Username?</h3><p class="mb-0">Username dan password (berupa NISN anak) dapat ditanyakan langsung ke Admin sekolah saat pendaftaran atau melalui kantor TK.</p></div></div></div></div>
+<div id="notifikasi" class="alert" role="alert" style="display:none"></div>
+<div class="row justify-content-center"><div class="col-12 col-md-8 col-lg-6"><h2 class="text-center">Login Orang Tua</h2><p class="text-center mx-auto lead-teks">Masukkan username (NISN anak) dan password untuk melihat data serta laporan perkembangan anak Anda. Portal ini bersifat <strong>read-only</strong> (hanya melihat data), tanpa perlu registrasi akun terlebih dahulu — username dan password sudah dibuatkan oleh admin sekolah berdasarkan NISN anak saat pendaftaran.</p><div class="card shadow-sm border-0 mb-3"><div class="card-body"><h3 class="h5 fw-bold mb-3">Form Login</h3><form id="form-login-ortu" action="portal-ortu.html" method="get" novalidate><div class="mb-3"><label for="username-ortu" class="form-label">Username (NISN Anak)</label><input type="text" class="form-control" id="username-ortu" name="username-ortu" placeholder="Contoh: 3141001" pattern="[0-9]{7,10}" required></div><div class="mb-3"><label for="password-ortu" class="form-label">Password (NISN Anak)</label><input type="password" class="form-control" id="password-ortu" name="password-ortu" placeholder="Masukkan NISN anak" required></div><button type="submit" class="btn btn-hijau w-100">Masuk</button></form></div></div><div class="card shadow-sm border-0 mb-3"><div class="card-body"><h3 class="h5 fw-bold mb-3">Belum Tahu Username?</h3><p class="mb-0">Username dan password (berupa NISN anak) dapat ditanyakan langsung ke Admin sekolah saat pendaftaran atau melalui kantor TK.</p></div></div></div></div>
   </main>
 
   <footer class="text-center small text-secondary py-4">
@@ -31,5 +32,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
